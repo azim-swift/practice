@@ -55,7 +55,9 @@ def process_lexemes(file_name, k):
 
 # тест
 file_name = 'input.txt'
-k = 2
+input_str = input("Введите число и k через пробел: ")
+number, k = input_str.split()
+k = int(k)
 lexemes = process_lexemes(file_name, k)
 
 for lexeme in lexemes:
