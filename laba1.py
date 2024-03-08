@@ -1,9 +1,3 @@
-#Вариант 7. 
-#Натуральные числа. Выводит на экран числа, содержащие хотя бы одну последовательность длиннее К подряд идущих одинаковых цифр.
-#Рядом с таким числом выводится повторяющаяся цифра (прописью) и количество повторений.
-
-
-
 def convert_number_to_words(number):
     words_dict = {
         '0': 'нуль',
@@ -55,10 +49,8 @@ def process_lexemes(file_name, k):
 
 # тест
 file_name = 'input.txt'
-input_str = input("Введите число и k через пробел: ")
-number, k = input_str.split()
-k = int(k)
-lexemes = process_lexemes(file_name, k)
+k = int(input('Введите k: '))
+lexemes = process_lexemes(file_name, k - 1)
 
 for lexeme in lexemes:
     number, number_words, repetitions = lexeme
